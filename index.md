@@ -7,6 +7,8 @@
 
 ![Image](http://www.onextrapixel.com/wp-content/uploads/2013/07/shutterstock-1.jpg)
 
+![Image](ExampleScreenshot.PNG)
+
 > This is a blockquote
 
 * List Item 1
