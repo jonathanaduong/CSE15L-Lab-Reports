@@ -4,7 +4,7 @@
 **VSCode Installation**
 * The first step to installing VSCode is going to the [download page](https://code.visualstudio.com/download) seen below and choosing the correct operating system which, in my case, is Windows 10.
 
-![Download Page](Images/VSCodeDownloadPage.png)
+![Download Page](Images/VSCodeDownloadPage.PNG)
 
 * Once it finishes installing and you open up VSCode, you should see a startup screen similar to this:
 
@@ -17,17 +17,17 @@
 **OpenSSH Installation**
 * We first need to make sure that OpenSSH is installed on your computer. To do so, open the search bar in the taskbar at the bottom left of your screen. Search up *Apps and Features* and open it. Click on *Optional features* as seen in the image below and search for *Open SSH Client*. If it shows up, that means it is already installed on your computer and you do not need to worry about this first step!
 
-![AppsAndFeatures](Images/Apps&Features.png)
+![AppsAndFeatures](Images/Apps&Features.PNG)
 
 * However, if OpenSSH Client does not appear in the list, you must select *Add a feature* on the same screen and install OpenSSH Client.
 
-![AddAFeature](Images/AddAFeature.png)
+![AddAFeature](Images/AddAFeature.PNG)
 
 **Account Lookup and Password Reset** 
 * Next, go to the UCSD [account lookup page](https://sdacs.ucsd.edu/~icc/index.php) and enter in your Username and Student ID to find your specific account for CSE 15L (Write down your
  username for this course as it will be needed later in this section). Under additional accounts, click the button for this course, then change your password.
 
-![Change Password](Images/UCSDChangePassword.png)
+![Change Password](Images/UCSDChangePassword.PNG)
 
 * Once you are on this screen, enter your username and student ID again. After you submit, the next page should have a section titled *I know my password*. Fill in the three fields, check your password, and submit if you are satisfied with your password.
 
@@ -81,7 +81,7 @@ Thu Jan 13, 2022  7:33pm - Prepping cs15lwi22
     * cat `/home/linux/ieng6/cs15lwi22/public/hello.txt`
 * Try all of these on your own to get a feel for using the terminal, as well as finding out what each command does since they are often used. Here's an example of using just a few of these commands:
 
-![Commands](Images/Commands.png)
+![Commands](Images/Commands.PNG)
 
 ## ***Moving Files with *scp****
 ---
@@ -110,7 +110,7 @@ scp WhereAmI.java cs15lwi22aam@ieng6.ucsd.edu:~/
 
 * Next, log into your ssh once again using your username and password, then type `ls` into the terminal. You have succeeded in moving a file with scp if you see WhereAmI.java listed in the terminal as seen below:
 
-![scp worked](Images/scpWorked.png)
+![scp worked](Images/scpWorked.PNG)
 
 * Finally, try compiling and running the file again using javac and java to see the differences since we are now running it on the ieng6 computer.
 
@@ -165,7 +165,7 @@ PS C:\Users\jonat>
 
 * If you did everything properly, your Windows PowerShell screen should look something like this:
 
-![keygen](Images/keygenComplete.png)
+![keygen](Images/keygenComplete.PNG)
 
 **Copying Public Key to .ssh Directory of Your User Account on the Server**
 * First, ssh into your account using your username and password again. Then, copy and paste the following comand into the terminal:
@@ -194,7 +194,7 @@ scp /Users/jonat/.ssh/id_rsa.pub cs15lwi22aam@ieng6.ucsd.edu:~/.ssh/authorized_k
 
     2. Semicolons enable you to run multiple commands on the same line in the terminal, which definitely saves time and space in the terminal. For example:
 
-        ![Multiple Commands](Images/multiplecommands.png)
+        ![Multiple Commands](Images/multiplecommands.PNG)
         (*Entering this line into the terminal would compile both Example and Example2, then run both of them*)
 
     3. You can use the up-arrow on your keyboard to recall the previous command that was ran. This is extremely helpful and what I probably use the most when running anything.
