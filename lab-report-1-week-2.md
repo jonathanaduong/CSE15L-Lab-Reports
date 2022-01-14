@@ -70,11 +70,11 @@ Thu Jan 13, 2022  7:33pm - Prepping cs15lwi22
 ---
 **Commands**
 * Here's a list of commands that you can try now that you are remotely connected:
-    * cd `~`
+    * cd ~
 
     * cd
-    * ls `-lat`
-    * ls `-a`
+    * ls -lat
+    * ls -a
     * ls `<directory>` where `<directory>` is\
     /home/linux/ieng6/cs15lwi22/cs15lwi22abc, where the `abc` is another student’s username
     * cp `/home/linux/ieng6/cs15lwi22/public/hello.txt ~/`
@@ -193,9 +193,10 @@ scp /Users/jonat/.ssh/id_rsa.pub cs15lwi22aam@ieng6.ucsd.edu:~/.ssh/authorized_k
         `$ ssh cs15lwi22@ieng6.ucsd.edu "ls"` (*This command logs in to the remote server and lists the home directory*)
 
     2. Semicolons enable you to run multiple commands on the same line in the terminal, which definitely saves time and space in the terminal. For example:
-
+ 
+        `$ javac Example.java; javac Example2.java; java Example; java Example2`
         ![Multiple Commands](Images/multiplecommands.PNG)
-        (*Entering this line into the terminal would compile both Example and Example2, then run both of them*)
+        (*Entering this line into the terminal compiles both Example and Example2, then runs both of them*)
 
     3. You can use the up-arrow on your keyboard to recall the previous command that was ran. This is extremely helpful and what I probably use the most when running anything.
 
