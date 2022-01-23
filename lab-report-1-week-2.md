@@ -196,8 +196,22 @@ scp /Users/jonat/.ssh/id_rsa.pub cs15lwi22aam@ieng6.ucsd.edu:~/.ssh/authorized_k
  
         `$ javac Example.java; javac Example2.java; java Example; java Example2`
         ![Multiple Commands](Images/multiplecommands.PNG)
+        
         (*Entering this line into the terminal compiles both Example and Example2, then runs both of them*)
 
     3. You can use the up-arrow on your keyboard to recall the previous command that was ran. This is extremely helpful and what I probably use the most when running anything.
+
+* We can use these optimizations with a local edit to WhereAmI.java to make copying it to the remote server and running it there a smooth, quick process.
+  * With the following code that utilizes the first and second optimization, we can run WhereAmI.java after editing and saving in just two keystrokes (Given we have already entered this code into the terminal):
+
+    `scp WhereAmI.java cs15lwi22aam@ieng6.ucsd.edu:~/; ssh cs15lwi22aam@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"`
+
+  * Copy and paste this command into your terminal using your username, then edit WhereAmI.java and save it. Now all you need to do is use the third optimization by pressing the up-arrow to recall the previous command, then press enter to run it!
+
+    ![Multiple Commands](Images/2keystrokes.PNG)
+  
+  * In just two keystrokes, you have copied your edited WhereAmI.java file to the remote server and ran it there!
+    
+  
 
 
