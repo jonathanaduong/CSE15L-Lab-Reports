@@ -6,9 +6,12 @@
 
 ![codeChange#1](Images/codeChangeDiffOne.PNG)
 
-* The first bug occurred when there were parentheses within the brackets or parentheses in the link itself. The symptom of this failure-inducing input can be seen in the output below:
+* The first bug occurred when there were parentheses within the brackets or parentheses in the link itself. The failure-inducing input and it's resulting symptom can be seen below:
 
 ```
+$ javac MarkdownParse.java
+$ java MarkdownParse new-file.md
+
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         at java.base/java.util.Arrays.copyOfRange(Arrays.java:3821)
         at java.base/java.lang.StringLatin1.newString(StringLatin1.java:767)
@@ -23,9 +26,12 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 
 ![codeChange#2](Images/codeChangeDiffTwo.PNG)
 
-* The second bug occurred when there were no parentheses after the brackets at all. The symptom of this failure-inducing input can be seen in the output below:
+* The second bug occurred when there were no parentheses after the brackets at all. The failure-inducing input and it's resulting symptom can be seen below:
 
 ```
+$ javac MarkdownParse.java
+$ java MarkdownParse breaking-file.md
+
 Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, end -1, length 33
         at java.base/java.lang.String.checkBoundsBeginEnd(String.java:3756)
         at java.base/java.lang.String.substring(String.java:1902)
@@ -39,9 +45,12 @@ Exception in thread "main" java.lang.StringIndexOutOfBoundsException: begin 0, e
 
 ![codeChange#3](Images/codeChangeDiffThree.PNG)
 
-* The third bug occurred when there is a large gap between the closing bracket and the parentheses. The symptom of this failure-inducing input can be seen in the output below:
+* The third bug occurred when there was a large gap between the closing bracket and the parentheses. The failure-inducing input and it's resulting symptom can be seen below:
 
 ```
+$ javac MarkdownParse.java
+$ java MarkdownParse breaking-file-2.md
+
 [thisshouldnotbealink.com]
 ```
-* The bug occurring is due to the code allowing the search for an open parenthesis to be anywhere after the first closing bracket, when in reality the open parenthesis should strictly be *directly* after the closing bracket. The link in this failure-inducing input has a large space between the closing bracket and the parentheses, causing the symptom of the link being printed, rather than not being recognized as a valid link.
+* The bug occurring is due to the code allowing the search for an open parenthesis to be anywhere after the first closing bracket, when in reality the open parenthesis should strictly be *directly* after the closing bracket. The link in this failure-inducing input has a large space between the closing bracket and the parentheses, causing the symptom of the link being printed, rather than not being printed at all since it is not a valid link.
