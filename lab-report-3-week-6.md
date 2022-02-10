@@ -14,4 +14,6 @@
 ![RunningGitCommandsInieng6](Images/ieng6PushCommit.PNG)
 * As seen above, I first used `touch`, or created a new file, called *lab-report-3-week-6.md* in my CSE15L-Lab-Reports repository. Then, I was able to `git add` the new file to the staging area, `git commit -m` the change with the message "Added Lab Report 3 to the repository", and `git push origin main` it so that the main branch was updated with the commit. 
 
-* The commit I pushed while on my ieng6 account can be found [here](https://github.com/jonathanaduong/CSE15L-Lab-Reports/commit/7cf64fcc4e85f18451a7cee2d4e753d4c44c6406) with the exact same message of "Added Lab Report 3 to the repository". All I did was create a new file called *lab-report-3-week-6.md* and did not add anything to the file.
+![CommitingOnieng6](Images/commitieng6.PNG)
+
+* The commit I pushed while on my ieng6 account can be found [here](https://github.com/jonathanaduong/CSE15L-Lab-Reports/commit/7cf64fcc4e85f18451a7cee2d4e753d4c44c6406) and seen above with the exact same message of "Added Lab Report 3 to the repository". All I did was create a new file called *lab-report-3-week-6.md* and did not add anything to the file.
