@@ -24,7 +24,9 @@
 ```
 
 * According to the [CommonMark demo site](https://spec.commonmark.org/dingus/), the expected output should be [my_(url)]. My implementation returns an output of [ ] and the provided implementation returns an output of [url], which means that both implementations are incorrect.
+
 * The problem with my code is that it expects a link to be given in the format of `[title](url)`, but markdown is able to recognize a link in the format of `[title]:url 'description'` according to this test.
+
 * To fix this bug, I would have to add an if/else statement at the beginning of the getLinks method to first check if the link's format is the one we have been currently testing with or this format that markdown accepts, then run the corresponding parser.
 
 ![fixOne](Images/myFix.PNG)
@@ -40,7 +42,9 @@
 ```
 
 * According to the [CommonMark demo site](https://spec.commonmark.org/dingus/), the expected output should be [bar*]. My implementation returns an output of [/bar\* "ti\*tle"] and the provided implementation returns an output of [ ], which means that both implementations are again incorrect.
+
 * The problem with my code is that it accepts anything between the parentheses as a valid link, while markdown apparently ignores forward and back slashes, as well as anything in quotations. 
+
 * To fix this bug, I would have to add new lines of code that check if there are forward and backslashes or anything in quotes, getting rid of any of these instances if so.
 
 ![fixTwo](Images/myFix2.PNG)
